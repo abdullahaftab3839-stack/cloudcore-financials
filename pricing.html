@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | CloudCore Financials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-cloud-bolt logo-icon"></i>
+        <span>CloudCore<span class="logo-accent"> Financials</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="why-us.html" class="nav-link">Why Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link active">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-copper btn-sm">Get Started</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Simple, Predictable Monthly Pricing</h1>
+      <p>No hourly surprises. Switch currencies below to view plans tailored for your region.</p>
+    </div>
+  </section>
+
+  <!-- Currency Switcher Section -->
+  <section class="pricing-section">
+    <div class="container">
+      
+      <!-- Currency Switcher Control -->
+      <div class="currency-switcher-container text-center">
+        <label for="currencySelector" class="currency-label"><i class="fa-solid fa-coins"></i> Select Currency:</label>
+        <div class="currency-buttons">
+          <button class="curr-btn active" data-curr="USD">🇺🇸 USD ($)</button>
+          <button class="curr-btn" data-curr="GBP">🇬🇧 GBP (£)</button>
+          <button class="curr-btn" data-curr="AED">🇦🇪 AED (AED)</button>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid-3 pricing-grid">
+        
+        <!-- Starter Plan -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <h3>Starter Plan</h3>
+            <p>Ideal for small startups, freelancers & boutique entities.</p>
+          </div>
+          <div class="plan-price">
+            <span class="curr-symbol">$</span><span class="price-val" data-usd="300">300</span>
+            <span class="price-period">/ month</span>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Up to 75 Transactions / mo</li>
+            <li><i class="fa-solid fa-check"></i> Monthly Bank Reconciliation</li>
+            <li><i class="fa-solid fa-check"></i> Basic P&L Statement</li>
+            <li><i class="fa-solid fa-check"></i> Single Currency Account</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated Email Support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-dark btn-full">Select Plan</a>
+        </div>
+
+        <!-- Growth Plan (Featured) -->
+        <div class="pricing-card featured">
+          <div class="popular-badge">Most Popular</div>
+          <div class="plan-header">
+            <h3>Growth Plan</h3>
+            <p>Ideal for growing businesses with moderate transaction volume.</p>
+          </div>
+          <div class="plan-price">
+            <span class="curr-symbol">$</span><span class="price-val" data-usd="700">700</span>
+            <span class="price-period">/ month</span>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Up to 250 Transactions / mo</li>
+            <li><i class="fa-solid fa-check"></i> Weekly Reconciliation</li>
+            <li><i class="fa-solid fa-check"></i> Full Monthly Financial Package</li>
+            <li><i class="fa-solid fa-check"></i> Multi-Currency Support</li>
+            <li><i class="fa-solid fa-check"></i> Direct WhatsApp & Email Support</li>
+            <li><i class="fa-solid fa-check"></i> Invoicing & AP/AR Tracking</li>
+          </ul>
+          <a href="contact.html" class="btn btn-copper btn-full">Select Plan</a>
+        </div>
+
+        <!-- Pro / Scale Plan -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <h3>Pro / Scale Plan</h3>
+            <p>Ideal for active multi-regional & high-volume operations.</p>
+          </div>
+          <div class="plan-price">
+            <span class="curr-symbol">$</span><span class="price-val" data-usd="1500">1500</span>
+            <span class="price-period">/ month</span>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Up to 600+ Transactions / mo</li>
+            <li><i class="fa-solid fa-check"></i> Daily / Weekly Reconciliation</li>
+            <li><i class="fa-solid fa-check"></i> Custom KPI & Cash Flow Dashboards</li>
+            <li><i class="fa-solid fa-check"></i> Advanced Multi-Currency Ledger</li>
+            <li><i class="fa-solid fa-check"></i> Priority Direct Communication</li>
+            <li><i class="fa-solid fa-check"></i> Custom Software Integration Setup</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-dark btn-full">Select Plan</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo footer-logo">
+          <i class="fa-solid fa-cloud-bolt logo-icon"></i>
+          <span>CloudCore<span class="logo-accent"> Financials</span></span>
+        </a>
+        <p>Agile, dedicated cloud bookkeeping for modern entrepreneurs across the UK, US, and Gulf regions.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="why-us.html">Why Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Office Location</h4>
+        <p class="office-addr">
+          <i class="fa-solid fa-location-dot"></i> House Number 249, Block B, Johar Town, Lahore, Pakistan
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect Directly</h4>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/923376023008" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:contact@cloudcorefinancials.com.pk" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p>&copy; <span id="currentYear"></span> CloudCore Financials. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

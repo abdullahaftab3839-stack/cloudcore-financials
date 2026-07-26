@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | CloudCore Financials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-cloud-bolt logo-icon"></i>
+        <span>CloudCore<span class="logo-accent"> Financials</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="why-us.html" class="nav-link">Why Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-copper btn-sm">Get Started</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Direct Reach Out</h1>
+      <p>Connect directly with our dedicated bookkeeping team. No middleman, no waiting.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+      
+      <!-- Direct Communication Options -->
+      <div class="contact-info">
+        <h2>Fast-Track Communication</h2>
+        <p>Prefer immediate direct messages? Reach out to us directly via WhatsApp or Email.</p>
+
+        <div class="direct-buttons">
+          <a href="https://wa.me/923376023008?text=Hello%20CloudCore%20Financials,%20I'd%20like%20to%20discuss%20bookkeeping%20services." target="_blank" class="btn btn-whatsapp btn-full">
+            <i class="fa-brands fa-whatsapp"></i> Chat Directly on WhatsApp
+          </a>
+
+          <a href="mailto:contact@cloudcorefinancials.com.pk" class="btn btn-email btn-full">
+            <i class="fa-solid fa-envelope"></i> Email Us Directly
+          </a>
+        </div>
+
+        <div class="office-box">
+          <h3><i class="fa-solid fa-building"></i> Office Address</h3>
+          <p><strong>CloudCore Financials</strong></p>
+          <p>House Number 249, Block B, Johar Town</p>
+          <p>Lahore, Pakistan</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-card">
+        <h3>Send Us an Inquiry</h3>
+        <p>Fill in your details below and choose how you would like to submit your request.</p>
+
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <!-- Web3Forms Configuration -->
+          <input type="hidden" name="access_key" value="4550a2cc-e5e0-46b9-a227-9091d10dfcad" />
+          <input type="hidden" name="subject" value="New Lead: CloudCore Financials Website Inquiry" />
+          <input type="hidden" name="from_name" value="CloudCore Web Portal" />
+          <input type="hidden" name="replyto" value="contact@cloudcorefinancials.com.pk" />
+
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="name" placeholder="e.g., Sarah Jenkins" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="sarah@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="country">Operating Region / Country</label>
+            <select id="country" name="region" required>
+              <option value="" disabled selected>Select Primary Region</option>
+              <option value="UK">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="GCC">Gulf / GCC (UAE, KSA, Qatar)</option>
+              <option value="Other">Other International</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">How can we help your business?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your transaction volume and accounting software..." required></textarea>
+          </div>
+
+          <!-- Dual Action Buttons -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <button type="button" id="sendWhatsAppBtn" class="btn btn-whatsapp btn-full">
+              <i class="fa-brands fa-whatsapp"></i> Send Inquiry via WhatsApp
+            </button>
+            <button type="submit" class="btn btn-copper btn-full">
+              <i class="fa-solid fa-paper-plane"></i> Submit Request via Email
+            </button>
+          </div>
+
+          <div id="formResponse" class="form-response"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo footer-logo">
+          <i class="fa-solid fa-cloud-bolt logo-icon"></i>
+          <span>CloudCore<span class="logo-accent"> Financials</span></span>
+        </a>
+        <p>Agile, dedicated cloud bookkeeping for modern entrepreneurs across the UK, US, and Gulf regions.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="why-us.html">Why Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Office Location</h4>
+        <p class="office-addr">
+          <i class="fa-solid fa-location-dot"></i> House Number 249, Block B, Johar Town, Lahore, Pakistan
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect Directly</h4>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/923376023008" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:contact@cloudcorefinancials.com.pk" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p>&copy; <span id="currentYear"></span> CloudCore Financials. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
