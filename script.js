@@ -199,3 +199,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
   calculatePrice();
 });
+
+/* --- Bookkeeping Health Check Quiz Logic --- */
+let totalScore = 0;
+
+function answerQuiz(currentStep, points) {
+  totalScore += points;
+
+  const currentEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
+  const nextStep = currentStep + 1;
+  const nextEl = document.querySelector(`.quiz-step[data-step="${nextStep}"]`);
+  const progressBar = document.getElementById("quizProgress");
+
+  if (currentEl) currentEl.classList.remove("active");
+
+  if (nextEl) {
+    nextEl.classList.add("active");
+    if (progressBar) progressBar.style.width = `${nextStep * 25}%`;
+  } else {
+    // Show Results
+    const resultsEl = document.querySelector(`.quiz-step[data-step="results"]`);
+    if (resultsEl) resultsEl.classList.add("active");
+    if (progressBar) progressBar.style.width = "100%";
+
+    const scoreDisplay = document.getElementById("quizScoreText");
+    const summaryDisplay = document.getElementById("quizSummaryText");
+    const waLink = document.getElementById("quizWhatsappLink");
+
+    if (scoreDisplay) scoreDisplay.textContent = `${totalScore}%`;
+
+    let advice = "";
+    if (totalScore >= 80) {
+      advice = "Your ledgers are well-managed! We can help automate your workflow and handle month-end closing seamlessly.";
+    } else if (totalScore >= 50) {
+      advice = "Your books need attention. Reconciliations and expense tracking are slipping, which risks tax season headaches.";
+    } else {
+      advice = "Action recommended. Your ledgers are behind, putting your business at financial risk. Let us perform a full catch-up cleanup.";
+    }
+
+    if (summaryDisplay) summaryDisplay.textContent = advice;
+
+    // Build custom WhatsApp link with the user's score
+    const waMessage = encodeURIComponent(
+      `Hello CloudCore Financials, I completed your Bookkeeping Health Check and scored ${totalScore}%. I'd like to get a quick review of my books.`
+    );
+    if (waLink) {
+      waLink.href = `https://wa.me/923376023008?text=${waMessage}`;
+    }
+  }
+}

@@ -212,6 +212,103 @@
     </div>
   </section>
 
+  <!-- Bookkeeping Health Check Quiz -->
+  <section class="quiz-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Quick Bookkeeping Health Check</h2>
+        <p>Answer 4 quick questions to evaluate your company's current financial readiness.</p>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quizProgress"></div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="quiz-step active" data-step="1">
+          <span style="color: var(--copper-primary); font-weight: 700; font-size: 0.85rem;">QUESTION 1 OF 4</span>
+          <h3 style="font-size: 1.5rem; margin-top: 5px;">When were your business bank accounts last reconciled?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt-btn" onclick="answerQuiz(1, 25)">
+              Within the last 7 to 14 days <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz(1, 15)">
+              Over a month ago <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz(1, 5)">
+              Not sure / Books are behind several months <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-step" data-step="2">
+          <span style="color: var(--copper-primary); font-weight: 700; font-size: 0.85rem;">QUESTION 2 OF 4</span>
+          <h3 style="font-size: 1.5rem; margin-top: 5px;">How do you track software receipts & business expenses?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt-btn" onclick="answerQuiz(2, 25)">
+              Digital app matching receipts automatically (Dext / Hubdoc / Cloud) <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz(2, 15)">
+              Saved manually in email folders or Drive <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz(2, 5)">
+              No central system / Shoebox of physical paper receipts <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-step" data-step="3">
+          <span style="color: var(--copper-primary); font-weight: 700; font-size: 0.85rem;">QUESTION 3 OF 4</span>
+          <h3 style="font-size: 1.5rem; margin-top: 5px;">Do you receive monthly Profit & Loss and Balance Sheet statements?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt-btn" onclick="answerQuiz(3, 25)">
+              Yes, regularly delivered by the 10th of every month <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz(3, 10)">
+              Only once a year during tax season <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz(3, 0)">
+              Never receive formal financial statements <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-step" data-step="4">
+          <span style="color: var(--copper-primary); font-weight: 700; font-size: 0.85rem;">QUESTION 4 OF 4</span>
+          <h3 style="font-size: 1.5rem; margin-top: 5px;">Are your accounts structured for your local tax regulations (VAT / IRS / Corporate Tax)?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt-btn" onclick="answerQuiz(4, 25)">
+              Yes, fully categorized & tax compliant <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz(4, 10)">
+              Partially, but we always rush at year-end <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz(4, 5)">
+              Unsure about regional tax compliance rules <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="quiz-step text-center" data-step="results">
+          <span style="color: var(--copper-primary); font-weight: 700; font-size: 0.85rem;">DIAGNOSTIC COMPLETE</span>
+          <h3 style="font-size: 1.8rem; margin-top: 5px;">Your Bookkeeping Health Score</h3>
+          <div class="quiz-score-badge" id="quizScoreText">85%</div>
+          <p id="quizSummaryText" style="color: var(--text-light); max-width: 550px; margin: 0 auto 25px;">
+            Your books are in fair shape, but automated monthly reconciliations could save you significant time and protect your tax readiness.
+          </p>
+          <a href="#" id="quizWhatsappLink" target="_blank" class="btn btn-whatsapp btn-lg">
+            <i class="fa-brands fa-whatsapp"></i> Share Score & Get Free 10-Min Review
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="container text-center">

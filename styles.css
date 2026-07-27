@@ -927,3 +927,85 @@ ul { list-style: none; }
     gap: 20px;
   }
 }
+
+/* --- Bookkeeping Health Check Quiz --- */
+.quiz-section {
+  padding: 90px 0;
+  background: var(--white);
+}
+
+.quiz-card {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-primary) 100%);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 45px;
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--glass-border);
+}
+
+.quiz-step {
+  display: none;
+}
+
+.quiz-step.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.quiz-opt-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  color: var(--white);
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-opt-btn:hover {
+  background: rgba(217, 119, 6, 0.2);
+  border-color: var(--copper-primary);
+  transform: translateX(4px);
+}
+
+.quiz-progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  width: 25%;
+  background: var(--copper-primary);
+  transition: width 0.3s ease;
+}
+
+.quiz-score-badge {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--copper-primary);
+  margin: 15px 0;
+}
