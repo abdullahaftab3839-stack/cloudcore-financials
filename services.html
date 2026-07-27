@@ -114,6 +114,49 @@
     </div>
   </section>
 
+  <!-- Interactive Before & After Showcase -->
+  <section class="showcase-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>The Transformation</h2>
+        <p>Toggle below to see how CloudCore Financials upgrades your monthly bookkeeping.</p>
+      </div>
+
+      <div class="showcase-container">
+        <div class="showcase-tabs">
+          <button class="showcase-tab-btn active-before" id="tabBeforeBtn" onclick="showShowcase('before')">
+            <i class="fa-solid fa-triangle-exclamation"></i> Unorganized Ledgers
+          </button>
+          <button class="showcase-tab-btn" id="tabAfterBtn" onclick="showShowcase('after')">
+            <i class="fa-solid fa-circle-check"></i> CloudCore Reconciled Books
+          </button>
+        </div>
+
+        <!-- Before View -->
+        <div class="showcase-card card-before active" id="viewBefore">
+          <h3 style="color: #991B1B;"><i class="fa-solid fa-xmark"></i> Typical Messy Books</h3>
+          <div class="showcase-list">
+            <div class="showcase-item"><i class="fa-solid fa-xmark"></i> Uncategorized bank transactions piling up for months.</div>
+            <div class="showcase-item"><i class="fa-solid fa-xmark"></i> Missing receipts and untracked software subscription expenses.</div>
+            <div class="showcase-item"><i class="fa-solid fa-xmark"></i> Last-minute panic and rushed accounting during tax season.</div>
+            <div class="showcase-item"><i class="fa-solid fa-xmark"></i> Zero visibility into monthly cash burn or true profitability.</div>
+          </div>
+        </div>
+
+        <!-- After View -->
+        <div class="showcase-card card-after" id="viewAfter">
+          <h3 style="color: var(--copper-primary);"><i class="fa-solid fa-check"></i> The CloudCore Standard</h3>
+          <div class="showcase-list">
+            <div class="showcase-item"><i class="fa-solid fa-check" style="color: var(--copper-primary);"></i> <strong>100% Weekly Reconciled Accounts:</strong> All bank feeds matched seamlessly.</div>
+            <div class="showcase-item"><i class="fa-solid fa-check" style="color: var(--copper-primary);"></i> <strong>Automated Receipt Attachments:</strong> Digital expense matching on cloud software.</div>
+            <div class="showcase-item"><i class="fa-solid fa-check" style="color: var(--copper-primary);"></i> <strong>Tax-Ready Month-End Reports:</strong> P&L and Balance Sheet delivered on schedule.</div>
+            <div class="showcase-item"><i class="fa-solid fa-check" style="color: var(--copper-primary);"></i> <strong>Direct 1-on-1 Specialist:</strong> Real-time answers via WhatsApp and email.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="container text-center">

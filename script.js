@@ -248,3 +248,25 @@ function answerQuiz(currentStep, points) {
     }
   }
 }
+
+/* --- Before & After Showcase Toggle Logic --- */
+function showShowcase(view) {
+  const beforeCard = document.getElementById("viewBefore");
+  const afterCard = document.getElementById("viewAfter");
+  const beforeBtn = document.getElementById("tabBeforeBtn");
+  const afterBtn = document.getElementById("tabAfterBtn");
+
+  if (!beforeCard || !afterCard) return;
+
+  if (view === "before") {
+    beforeCard.classList.add("active");
+    afterCard.classList.remove("active");
+    beforeBtn.className = "showcase-tab-btn active-before";
+    afterBtn.className = "showcase-tab-btn";
+  } else {
+    afterCard.classList.add("active");
+    beforeCard.classList.remove("active");
+    afterBtn.className = "showcase-tab-btn active-after";
+    beforeBtn.className = "showcase-tab-btn";
+  }
+}
