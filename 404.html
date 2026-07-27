@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | CloudCore Financials</title>
+
+  <!-- Favicon Links -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <i class="fa-solid fa-cloud-bolt logo-icon"></i>
+        <span>CloudCore<span class="logo-accent"> Financials</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="/" class="nav-link">Home</a>
+        <a href="why-us.html" class="nav-link">Why Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-copper btn-sm">Get Started</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Hero Section -->
+  <section class="page-banner" style="padding: 180px 0 100px;">
+    <div class="container text-center">
+      <div style="font-size: 4rem; color: var(--copper-primary); margin-bottom: 15px;">
+        <i class="fa-solid fa-compass-drafting"></i>
+      </div>
+      <h1 style="font-size: 3.5rem; margin-bottom: 15px;">404</h1>
+      <h2 style="color: var(--white); font-weight: 700; margin-bottom: 15px;">Page Not Found</h2>
+      <p style="max-width: 500px; margin: 0 auto 30px;">
+        The page you are looking for might have been moved, renamed, or doesn't exist in our current directory.
+      </p>
+      <div style="display: flex; gap: 15px; justify-content: center;">
+        <a href="/" class="btn btn-copper btn-lg"><i class="fa-solid fa-house"></i> Return to Home</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Contact Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="/" class="logo footer-logo">
+          <i class="fa-solid fa-cloud-bolt logo-icon"></i>
+          <span>CloudCore<span class="logo-accent"> Financials</span></span>
+        </a>
+        <p>Agile, dedicated cloud bookkeeping for modern entrepreneurs across the UK, US, and Gulf regions.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="why-us.html">Why Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Office Location</h4>
+        <p class="office-addr">
+          <i class="fa-solid fa-location-dot"></i> House Number 249, Block B, Johar Town, Lahore, Pakistan
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect Directly</h4>
+        <div class="social-links">
+          <a href="https://wa.me/923376023008" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:contact@cloudcorefinancials.com.pk" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p>&copy; <span id="currentYear"></span> CloudCore Financials. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
