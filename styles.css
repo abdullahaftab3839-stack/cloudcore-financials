@@ -834,4 +834,96 @@ ul { list-style: none; }
     height: 50px;
     font-size: 1.5rem;
   }
+
+}
+
+/* --- Interactive Pricing Calculator --- */
+.calculator-box {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  box-shadow: var(--shadow-md);
+}
+
+.calc-slider-group {
+  margin: 30px 0;
+}
+
+.calc-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--navy-dark);
+}
+
+.slider-val-badge {
+  background: var(--copper-light);
+  color: var(--copper-primary);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+}
+
+.range-slider {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--border-color);
+  outline: none;
+  accent-color: var(--copper-primary);
+  cursor: pointer;
+}
+
+.software-selection {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.sw-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-light);
+  color: var(--navy-dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sw-btn.active {
+  background: var(--navy-dark);
+  color: var(--white);
+  border-color: var(--navy-dark);
+}
+
+.calc-output-box {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-primary) 100%);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calc-price-display {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--copper-primary);
+}
+
+@media (max-width: 768px) {
+  .calc-output-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
 }

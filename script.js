@@ -145,3 +145,57 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* --- Interactive Scope Calculator Logic --- */
+document.addEventListener("DOMContentLoaded", function () {
+  const txRange = document.getElementById("txRangeInput");
+  const txDisplay = document.getElementById("txCountDisplay");
+  const priceVal = document.getElementById("calcPriceVal");
+  const priceSymbol = document.getElementById("calcSymbol");
+  const swBtns = document.querySelectorAll(".sw-btn");
+
+  if (!txRange) return; // Exit if not on pricing page
+
+  let activeSoftware = "Xero";
+
+  function calculatePrice() {
+    const tx = parseInt(txRange.value);
+    txDisplay.textContent = `${tx} Transactions`;
+
+    // Base calculation: $200 base + $1.80 per transaction
+    let estimatedPriceUSD = Math.round(200 + tx * 1.8);
+
+    // Adjust currency based on global selected currency button
+    const activeCurrBtn = document.querySelector(".curr-btn.active");
+    const currentCurrency = activeCurrBtn ? activeCurrBtn.getAttribute("data-curr") : "USD";
+
+    if (currentCurrency === "GBP") {
+      priceSymbol.textContent = "£";
+      priceVal.textContent = Math.round(estimatedPriceUSD * 0.78);
+    } else if (currentCurrency === "AED") {
+      priceSymbol.textContent = "AED ";
+      priceVal.textContent = Math.round(estimatedPriceUSD * 3.67);
+    } else {
+      priceSymbol.textContent = "$";
+      priceVal.textContent = estimatedPriceUSD;
+    }
+  }
+
+  txRange.addEventListener("input", calculatePrice);
+
+  swBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      swBtns.forEach((b) => b.classList.remove("active"));
+      this.classList.add("active");
+      activeSoftware = this.getAttribute("data-sw");
+    });
+  });
+
+  // Re-calculate when user changes currency using your top switcher
+  const currencyButtons = document.querySelectorAll(".curr-btn");
+  currencyButtons.forEach((btn) => {
+    btn.addEventListener("click", () => setTimeout(calculatePrice, 50));
+  });
+
+  calculatePrice();
+});
