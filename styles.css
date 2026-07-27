@@ -17,7 +17,7 @@
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
-  --transition: all 0.3s ease;
+  --transition: all 0.25s ease-in-out;
 }
 
 /* --- Base & Reset --- */
@@ -44,9 +44,26 @@ body {
   margin: 0 auto;
 }
 
-a { text-decoration: none; color: inherit; }
+a { 
+  text-decoration: none; 
+  color: inherit; 
+  transition: var(--transition);
+}
+
 ul { list-style: none; }
 .text-center { text-align: center; }
+
+/* --- Global Hover & Transition Polish --- */
+.btn, 
+.nav-link, 
+.value-card, 
+.region-card, 
+.advantage-card,
+.pricing-card,
+.service-detail-card,
+.social-links a {
+  transition: var(--transition);
+}
 
 /* --- Layout Grids --- */
 .grid-3 {
@@ -65,7 +82,6 @@ ul { list-style: none; }
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition);
   border: none;
   font-size: 0.95rem;
 }
@@ -93,6 +109,7 @@ ul { list-style: none; }
 
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .btn-outline-dark {
@@ -104,6 +121,7 @@ ul { list-style: none; }
 .btn-outline-dark:hover {
   background: var(--navy-dark);
   color: var(--white);
+  transform: translateY(-2px);
 }
 
 .btn-whatsapp {
@@ -113,6 +131,8 @@ ul { list-style: none; }
 
 .btn-whatsapp:hover {
   background-color: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
 }
 
 .btn-email {
@@ -122,6 +142,7 @@ ul { list-style: none; }
 
 .btn-email:hover {
   background-color: var(--navy-primary);
+  transform: translateY(-2px);
 }
 
 /* --- Badges --- */
@@ -179,7 +200,6 @@ ul { list-style: none; }
   color: var(--text-light);
   font-weight: 500;
   font-size: 0.95rem;
-  transition: var(--transition);
 }
 
 .nav-link:hover, .nav-link.active {
@@ -340,6 +360,12 @@ ul { list-style: none; }
   border: 1px solid var(--border-color);
 }
 
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(217, 119, 6, 0.4);
+}
+
 .value-icon {
   width: 50px;
   height: 50px;
@@ -365,7 +391,6 @@ ul { list-style: none; }
   border-radius: 16px;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
-  transition: var(--transition);
 }
 
 .region-card:hover {
@@ -431,6 +456,12 @@ ul { list-style: none; }
   border: 1px solid var(--border-color);
 }
 
+.advantage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--copper-primary);
+}
+
 .adv-icon {
   width: 48px;
   height: 48px;
@@ -459,6 +490,12 @@ ul { list-style: none; }
   display: flex;
   gap: 30px;
   align-items: flex-start;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--copper-primary);
 }
 
 .service-detail-icon {
@@ -535,6 +572,11 @@ ul { list-style: none; }
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
 }
 
 .pricing-card.featured {
@@ -716,13 +758,13 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition);
   border: 1px solid var(--glass-border);
 }
 
 .social-links a:hover {
   background: var(--copper-primary);
   border-color: var(--copper-primary);
+  transform: translateY(-3px);
 }
 
 .footer-bottom {
